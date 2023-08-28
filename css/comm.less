@@ -1,0 +1,38 @@
+// 浏览器兼容提示 start
+.chromeframe {
+    background: #000;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    position: relative;
+    z-index: 12;
+
+    a {
+        color: #f13c35;
+    }
+}
+// 浏览器兼容提示 end
+
+// 导入 雪碧图 start
+.comm-icon-phone, .comm-icon-search, .avatar-border, .icon-new, .icon-hot {
+    background-image: url(../images/topfoot-spr.png);
+    background-size: 405px 178px;
+    background-repeat: no-repeat;
+}
+// 导入 雪碧图 end
+
+// 动画样式 topin：子导航菜单出现
+@keyframes topin {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+

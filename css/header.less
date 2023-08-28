@@ -1,0 +1,319 @@
+// 官网页头 start
+.comm-head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .head-normal {
+        width: 100%;
+        min-width: 1230px;
+        max-width: 1358px;
+        height: 78px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 10;
+
+        // logo
+        .logo {
+            float: left;
+            width: 167px;
+            height: 60px;
+            margin-top: 10px;
+        }
+
+        // 官网导航
+        .head-nav {
+            float: left;
+            width: 55%;
+            padding-top: 16px;
+            margin-left: -5px;
+
+            li {
+                width: 20%;
+                height: 78px;
+                float: left;
+                text-align: center;
+
+                a {
+                    display: inline-block;
+
+                    .head-nav-title {
+                        display: block;
+                        color: #fff;
+                        font-size: 18px;
+                        letter-spacing: 1px;
+                    }
+
+                    .head-hav-subtitle {
+                        display: block;
+                        color: #aeaeae;
+                        font-size: 11px;
+                        letter-spacing: 1px;
+                        margin-top: -1px;
+                    }
+                }
+            }
+        }
+
+        // 玩家信息
+        .head-userinfo-normal {
+            width: 244px;
+            height: 78px;
+            line-height: 78px;
+            float: right;
+
+            .head-userinfo-avatar {
+                float: left;
+                position: relative;
+                width: 48px;
+                height: 48px;
+                text-align: center;
+                line-height: 48px;
+                margin-top: 14px;
+
+                img {
+                    border-radius: 50%;
+                    vertical-align: middle;
+                }
+
+                .avatar-border {
+                    background-position: -216px -117px;
+                    position: absolute;
+                    width: 48px;
+                    height: 48px;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            .head-userinfo-brief {
+                float: left;
+                margin-left: 10px;
+
+                p {
+                    color: #fefefe;
+                    font-size: 16px;
+
+                    a {
+                        color: #fff3d0;
+                    }
+                }
+            }
+        }
+
+        // 掌盟图标
+        .head-app-normal {
+            float: right;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            margin: 17px 31px 0 0;
+
+            .comm-icon-phone {
+                background-position: -303px -84px;
+                display: inline-block;
+                width: 16px;
+                height: 24px;
+                vertical-align: middle;
+            }
+        }
+
+        // 搜索按钮
+        .head-search-btn {
+            float: right;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            margin: 17px 12px 0 0;
+
+            .comm-icon-search {
+                background-position: -381px -39px;
+                display: inline-block;
+                width: 21px;
+                height: 21px;
+                vertical-align: middle;
+
+            }
+        }
+    }
+
+    // 官网导航子菜单
+    .head-nav-sub {
+        display: none;
+        width: 100%;
+        background: url(../images/dark60-bg-repeat.png) repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 88px 0 32px 0;
+        z-index: 4;
+
+
+        .head-nav-sub-inner {
+            width: 100%;
+            min-width: 1230px;
+            max-width: 1358px;
+            margin: 0 auto;
+        }
+
+        ul {
+            width: 55%;
+            margin-left: 161px;
+
+            >li {
+                float: left;
+                width: 20%;
+                text-align: center;
+            }
+        }
+
+        .head-nav-sub-a {
+            display: block;
+            height: 29px;
+            line-height: 29px;
+            text-align: center;
+            font-size: 14px;
+            color: #e1e1e1;
+            cursor: pointer;
+
+            .icon-hot, .icon-new {
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                vertical-align: middle;
+                margin: -2px 2px 0 0;
+            }
+
+            .icon-hot {
+                background-position: -347px -84px;
+            }
+
+            .icon-new {
+                background-position: -381px -65px;
+            }
+        }
+
+        .head-nav-sub-a:hover {
+            color:#e9c06c
+        }
+
+    }
+
+    .head-nav-sub.show {
+        display: block;
+        animation: topin .3s;
+    }
+}
+// 官网页头 end
+
+// 头部广告 start
+.comm-topact {
+    min-width: 1230px;
+    height: 360px;
+    overflow: hidden;
+    position: relative;
+    transition: height .6s;
+
+    .dark-mask {
+        width: 100%;
+        height: 131px;
+        background: url(../images/dark-jianbian-repeatx-0.png) repeat;
+        position: absolute;
+        z-index: 3;
+    }
+}
+
+.comm-topact.big {
+    height: 720px!important;
+
+    .topact-big-img {
+        z-index: 1;
+    }
+
+    .topact-small-img {
+        opacity: 0;
+    }
+}
+
+.topact-big-img, .topact-small-img {
+    width: 1920px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.topact-small-img {
+    transition: opacity .6s;
+    opacity: 1;
+}
+
+.comm-topact-inner {
+    min-width: 1230px;
+    max-width: 1358px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+
+    .top-act-link {
+        box-sizing: border-box;
+        width: 160px;
+        height: 40px;
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        margin-left: -80px;
+        font-size: 14px;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid #7E5F29;
+        background: rgba(0,0,0,.65);
+        color: #D0A131;
+        transition: filter .5s;
+    }
+
+    .top-act-link:hover {
+        filter: brightness(1.15);
+    }
+
+    .top-version {
+        position: absolute;
+        right: 0;
+        bottom: 28px;
+        font-size: 14px;
+        color: #888787;
+
+        em {
+            color: #f5d185;
+            margin-right: 10px;
+        }
+
+        .top-version-link {
+            display: inline-block;
+            padding: 0 15px;
+            height: 22px;
+            text-align: center;
+            line-height: 22px;
+            border: 2px solid #f5d185;
+            font-size: 12px;
+            background: rgba(0,0,0,.65);
+            color: #f5d185;
+            transition: filter .5s;
+            border-image: linear-gradient(to bottom, #6b5024 0,#b88d35 100%);
+            border-image-slice: 1;
+        }
+
+        .top-version-link:hover {
+            filter: brightness(1.15);
+            background: #111;
+        }
+    }
+}
+// 头部广告 end
