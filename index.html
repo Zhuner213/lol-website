@@ -201,30 +201,20 @@
         console.log(headNav)
         const headNavSub = document.querySelector('.head-nav-sub')
 
-        // 检测头部导航子菜单是否已经展示（有show这个class就是变为展示）
-        const isNavSubShow = function isNavSubShow() {
-            // console.log(headNavSub.classList.contains('show'))
-            console.log(headNavSub.classList)
-            return headNavSub.classList.contains('show')
-        }
-
         // hover顶部导航显示子菜单
-        headNav.addEventListener('mouseover', function() {
-            // if (isNavSubShow()) return
-            console.log('顶部导航菜单mouseover')
+        headNav.addEventListener('mouseenter', function() {
             headNavSub.classList.add('show')
         })
-        headNav.addEventListener('mouseout', function(e) {
-            console.log('顶部导航菜单mouseout', e)
-            debugger
+        // 鼠标离开顶部导航子菜单消失
+        headNav.addEventListener('mouseleave', function(e) {
             headNavSub.classList.remove('show')
         })
-        headNavSub.addEventListener('mouseover', function() {
-            console.log('子菜单mouseover')
+        // 鼠标移入子菜单，添加show
+        headNavSub.addEventListener('mouseenter', function() {
             headNavSub.classList.add('show')
         })
-        headNavSub.addEventListener('mouseout', function() {
-            console.log('子菜单mouseout')
+        // 鼠标移出子菜单，子菜单消失
+        headNavSub.addEventListener('mouseleave', function() {
             headNavSub.classList.remove('show')
         })
 
