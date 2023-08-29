@@ -7,6 +7,7 @@
     <title>官网</title>
     <link rel="stylesheet/less" href="./css/index.less">
     <script src="./js/less.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
 </head>
 
 <body>
@@ -83,6 +84,28 @@
             <a class="head-search-btn">
                 <i class="comm-icon-search"></i>
             </a>
+            <!-- hover：掌盟二维码 -->
+            <div class="head-app-hover">
+                <i class="head-zm-qrcode">
+                    <img src="./images/zm-qrcode-new.jpg" width="110" alt="掌盟App二维码">
+                </i>
+                <p>扫码下载掌上英雄联盟</p>
+                <img class="polo" src="./images/polo.gif" alt="魄罗">
+            </div>
+            <!-- 登录hover -->
+            <div class="head-login-hover">
+                <div class="unlogin">
+                    <p>
+                        登录并且绑定大区后才可以查看您的具体信息哦
+                        <br>
+                        (包括战绩、资产、声望）
+                    </p>
+                    <p>
+                        官网个人信息显示略有延迟，请以游戏数据为准
+                    </p>
+                </div>
+                <div class="logined"></div>
+            </div>
         </div>
 
         <!-- hover: 官网导航子菜单 -->
@@ -192,40 +215,6 @@
         </div>
     </div>
     <!-- 头部广告 end -->
-
-    <script>
-        const body = document.body
-        const topAct = document.querySelector('.comm-topact')
-
-        const headNav = document.querySelector('.head-nav')
-        console.log(headNav)
-        const headNavSub = document.querySelector('.head-nav-sub')
-
-        // hover顶部导航显示子菜单
-        headNav.addEventListener('mouseenter', function() {
-            headNavSub.classList.add('show')
-        })
-        // 鼠标离开顶部导航子菜单消失
-        headNav.addEventListener('mouseleave', function(e) {
-            headNavSub.classList.remove('show')
-        })
-        // 鼠标移入子菜单，添加show
-        headNavSub.addEventListener('mouseenter', function() {
-            headNavSub.classList.add('show')
-        })
-        // 鼠标移出子菜单，子菜单消失
-        headNavSub.addEventListener('mouseleave', function() {
-            headNavSub.classList.remove('show')
-        })
-
-        // 滚动top广告图切换
-        body.addEventListener('click', function() {
-            console.log(222)
-            topAct.classList.remove('big')
-        })
-
-
-    </script>
 </body>
 
 </html>

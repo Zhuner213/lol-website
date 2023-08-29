@@ -5,6 +5,7 @@
     left: 0;
     width: 100%;
 
+    // 头部版心
     .head-normal {
         width: 100%;
         min-width: 1230px;
@@ -50,7 +51,7 @@
                         color: #aeaeae;
                         font-size: 11px;
                         letter-spacing: 1px;
-                        margin-top: -1px;
+                        margin-top: 2px;
                     }
                 }
             }
@@ -62,6 +63,8 @@
             height: 78px;
             line-height: 78px;
             float: right;
+            position: relative;
+            z-index: 2;
 
             .head-userinfo-avatar {
                 float: left;
@@ -71,6 +74,7 @@
                 text-align: center;
                 line-height: 48px;
                 margin-top: 14px;
+                font-size: 0;
 
                 img {
                     border-radius: 50%;
@@ -138,6 +142,78 @@
 
             }
         }
+
+        // hover：掌盟二维码 
+        .head-app-hover {
+            display: none;
+            background-position: 0 0;
+            width: 211px;
+            height: 178px;
+            position: absolute;
+            top: 68px;
+            right: 190px;
+
+            &.show {
+                display: block;
+                animation: topin .3s;
+            }
+
+            .head-zm-qrcode {
+                display: block;
+                width: 120px;
+                height: 120px;
+                line-height: 120px;
+                margin: 22px auto 0 auto;
+                text-align: center;
+                font-size: 0;
+                background: #fff;
+                border-radius: 10px;
+
+                img {
+                    vertical-align: middle;
+                }
+            }
+
+            p {
+                text-align: center;
+                color: #cdbe91;
+                margin-top: 10px;
+            }
+
+            .polo {
+                position: absolute;
+                bottom: -2px;
+                right: -8px;
+            }
+        }
+
+        // 登录hover
+        .head-login-hover {
+            display: none;
+            width: 310px;
+            padding: 78px 0 20px 0;
+            position: absolute;
+            top: 0;
+            right: -38px;
+            background: url(../images/dark70-bg-repeat.png);
+
+            &.show {
+                display: block;
+                animation: topin .3s;
+            }
+
+            .unlogin {
+                p {
+                    color: #848383;
+                    text-align: center;
+                }
+
+                &>p:nth-child(1) {
+                    margin-top: 30px;
+                }
+            }
+            
+        }
     }
 
     // 官网导航子菜单
@@ -151,6 +227,10 @@
         padding: 88px 0 32px 0;
         z-index: 4;
 
+        &.show {
+            display: block;
+            animation: topin .3s;
+        }
 
         .head-nav-sub-inner {
             width: 100%;
@@ -202,10 +282,6 @@
 
     }
 
-    .head-nav-sub.show {
-        display: block;
-        animation: topin .3s;
-    }
 }
 // 官网页头 end
 
@@ -243,10 +319,8 @@
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+    left: 50%;
+    margin-left: -960px;
 }
 
 .topact-small-img {
