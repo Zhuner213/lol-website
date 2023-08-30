@@ -13,6 +13,14 @@ const headAppHover = document.querySelector('.head-app-hover')
 const headUserInfo = document.querySelector('.head-userinfo-normal')
 // 登录hover
 const headLoginHover = document.querySelector('.head-login-hover')
+// hover：搜索栏
+const searchHoverWrap = document.querySelector('.search-hover-wrap')
+// 搜索按钮（hover前）
+const headSearchBtn = document.querySelector('.head-search-btn')
+// 搜索栏关闭按钮X
+const btnCloseSearch = document.querySelector('.btn-close-search')
+// 搜索框
+const inputSearch = document.querySelector('.input-search')
 
 // 滚动top广告图切换
 body.addEventListener('click', function () {
@@ -22,7 +30,6 @@ body.addEventListener('click', function () {
 // 鼠标移入hoverFrom或移入hoverLayer给hoverLayer添加classname
 // 鼠标移出hoverFrom或移出hoverLayer给hoverLayer删掉classname
 const hoverToggleClass = function hoverToggleClass(hoverFrom, hoverLayer, classname, delay) {
-
     let timeout
     let showTimeout
 
@@ -74,9 +81,30 @@ const HeadHoverControl = {
     }
 }
 
+// 搜索框模块
+const HeadSearch = {
+    init() {
+        this.searchHover()
+    },
+    // 点击搜索按钮搜索栏出现 和 点击关闭搜索栏消失
+    searchHover() {
+        // 点击搜索按钮搜索栏出现
+        headSearchBtn.addEventListener('click', function() {
+            searchHoverWrap.classList.add('show')
+            inputSearch.focus()
+        })
+
+        // 点击关闭搜索栏消失
+        btnCloseSearch.addEventListener('click', function() {
+            searchHoverWrap.classList.remove('show')
+        })
+    }
+}
+
 const HeadModules = {
     init() {
         HeadHoverControl.init()
+        HeadSearch.init()
     }
 }
 
